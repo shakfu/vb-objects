@@ -2,7 +2,7 @@
 
 This friendly fork of Volker Boehm's excellent [vb-objects](https://github.com/v7b1/vb-objects) has the following changes:
 
-- Includes 3 other externals from Volker, [bonk~](https://github.com/v7b1/bonk_64bit-version), [fiddle~[(https://github.com/v7b1/fiddle_64bit_version), and [signmund~](https://github.com/v7b1/sigmund_64bit-version) which are all 64-bit versions of the popular puredata objects by Miller Puckette for MaxMSP
+- Includes 3 other externals from Volker, [bonk~](https://github.com/v7b1/bonk_64bit-version), [fiddle~](https://github.com/v7b1/fiddle_64bit_version), and [sigmund~](https://github.com/v7b1/sigmund_64bit-version) which are all 64-bit versions of the popular puredata objects by Miller Puckette for MaxMSP
 
 - macOS only
 
@@ -18,12 +18,11 @@ brew install aubio fftw libsamplerate
 
 - Defaults to native architecture architectures (no universal binaries by default)
 
-- Added a Makefile to kick off the cmake build
+- Added a Makefile to as a simplified frontend to the cmake build
 
 ```bash
 make update # to update git submodules
-make
-# optional
+make 
 make link   # to symlink folder to $HOME/Max 8/Packages/vb-objectss
 ```
 
