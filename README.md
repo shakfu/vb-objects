@@ -1,8 +1,6 @@
 # vb-objects
 
-This is a fork of Volker Boehm's [vb-objects](https://github.com/v7b1/vb-objects)
-
-It has the following changes:
+This friendly fork of Volker Boehm's excellent [vb-objects](https://github.com/v7b1/vb-objects) has the following changes:
 
 - macOS only
 
