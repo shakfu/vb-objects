@@ -4,18 +4,28 @@ project(vb-objects)
 
 if (APPLE)
     if (NOT CMAKE_OSX_ARCHITECTURES)
-        set(CMAKE_OSX_ARCHITECTURES "x86_64;arm64" CACHE STRING "macOS architecture" FORCE)
+        if(C74_BUILD_FAT)
+            set(CMAKE_OSX_ARCHITECTURES "x86_64;arm64" CACHE STRING "macOS architecture" FORCE)
+        else()
+            set(CMAKE_OSX_ARCHITECTURES ${CMAKE_SYSTEM_PROCESSOR} CACHE STRING "macOS architecture" FORCE)
+        endif()
+        message("CMAKE_OSX_ARCHITECTURES set to ${CMAKE_OSX_ARCHITECTURES}")
     endif()
 endif()
 
 
-
-# Fetch the correct verion of the max-api
-message(STATUS "Updating Git Submodules")
-execute_process(
-	COMMAND				git submodule update --init --recursive
-	WORKING_DIRECTORY	"${CMAKE_CURRENT_SOURCE_DIR}"
-)
+if(CMAKE_HOST_APPLE)
+    execute_process(
+        COMMAND brew --prefix
+        OUTPUT_VARIABLE HOMEBREW_PREFIX
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+    )
+    if(DEFINED HOMEBREW_PREFIX)
+        set(HAS_HOMEBREW 1)
+        message(STATUS "HAS_HOMEBREW: ${HAS_HOMEBREW}")
+        message(STATUS "HOMEBREW_PREFIX: ${HOMEBREW_PREFIX}")
+    endif()
+endif()
 
 
 # Misc setup and subroutines

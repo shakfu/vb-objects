@@ -1,9 +1,3 @@
 [submodule "source/max-sdk-base"]
 	path = source/max-sdk-base
 	url = https://github.com/Cycling74/max-sdk-base
-[submodule "source/libs/libsamplerate"]
-	path = source/libs/libsamplerate
-	url = https://github.com/libsndfile/libsamplerate
-[submodule "source/libs/aubio"]
-	path = source/libs/aubio
-	url = https://github.com/aubio/aubio

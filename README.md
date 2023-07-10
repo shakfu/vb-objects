@@ -1,4 +1,29 @@
 # vb-objects
+
+This is a fork of Volker Boehm's [vb-objects](https://github.com/v7b1/vb-objects)
+
+It has the following changes:
+
+- macOS only
+
+- Homebrew based dependency management instead of building everything in-source in `libs`
+
+Therefore it requires:
+
+```bash
+
+brew install aubio fftw libsamplerate
+
+```
+
+- Defaults to native architecture architectures (no universal binaries by default)
+
+- Added a Makefile to kick off the cmake build
+
+The original README starts from here:
+
+--- 
+
 This is a slowly growing collection of externals made for the programming environment MaxMSP (www.Cycling74.com).
 
 
