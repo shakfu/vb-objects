@@ -8,23 +8,23 @@ This friendly fork of Volker Boehm's excellent [vb-objects](https://github.com/v
 
 - Homebrew based dependency management instead of building everything in-source in `libs`
 
-Therefore it requires:
+  Therefore it requires:
 
-```bash
+  ```bash
 
-brew install aubio fftw libsamplerate
+  brew install aubio fftw libsamplerate
 
-```
+  ```
 
 - Defaults to native architecture (no universal binaries by default)
 
 - Added a Makefile as a simplified frontend to the cmake build
 
-```bash
-make update # to update git submodules
-make 
-make link   # to symlink folder to $HOME/Max 8/Packages/vb-objectss
-```
+  ```bash
+  make update # to update git submodules
+  make 
+  make link   # to symlink folder to $HOME/Max 8/Packages/vb-objectss
+  ```
 
 The original README starts from here:
 

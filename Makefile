@@ -1,7 +1,7 @@
 
 DEPENDENCIES = libsamplerate fftw aubio
 
-.PHONY: check build update link clean reset
+.PHONY: check build update link setup clean reset
 
 
 all: build
@@ -17,7 +17,6 @@ check:
 build:
 	@mkdir -p build && cd build && cmake -G Xcode .. && cmake --build . --config 'Release'
 
-
 update:
 	git submodule init
 	git submodule update
@@ -26,7 +25,6 @@ link:
 	ln -s $(shell pwd) "$(HOME)/Documents/Max 8/Packages/$(shell basename `pwd`)"
 
 setup: update link
-
 
 clean:
 	@rm -rf build
