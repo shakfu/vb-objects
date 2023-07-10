@@ -16,9 +16,9 @@ brew install aubio fftw libsamplerate
 
 ```
 
-- Defaults to native architecture architectures (no universal binaries by default)
+- Defaults to native architecture (no universal binaries by default)
 
-- Added a Makefile to as a simplified frontend to the cmake build
+- Added a Makefile as a simplified frontend to the cmake build
 
 ```bash
 make update # to update git submodules
